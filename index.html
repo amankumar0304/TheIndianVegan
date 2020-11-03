@@ -7,6 +7,7 @@
     <script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
     <link rel="stylesheet" href="main.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 
 <script>
@@ -16,114 +17,98 @@
     toggleMenu.classList.toggle("active");
     navigation.classList.toggle("active");
   }</script>
-  <script>
-    $(document).ready(function(){
-      var count=0;
-      var counter=setInterval(function(){
-        if(count<101)
-        {
-          $('.count').text(count+" %")
-          count++;
-        }
-        else{
-          clearInterval(counter)
-        }
-      },15)
-      var colorCount=80;
-      var colorCounter=setInterval(function(){
-        if(colorCount>-1)
-        {
-          $(".loader-logo").css({"color":"hsl(0,0%,"+colorCount+"%)","border":"8px solid hsl(0,0%,"+colorCount+"%)"})
-          
-          colorCount--;
-        }
-        else{
-          clearInterval(colorCounter)
-        }
-      },35)
 
-    })
-  </script>
   </head>
 <body>
     <section class="sec">
         <header>
-            <a href="#"><h4 class="logo">The Indian Vegan</h4></a>
+            <a href="#" data-aos="zoom-in" data-aos-duration="700" data-aos-once="true"><h4 class="logo">The Indian Vegan</h4></a>
             <div class="toggleMenu" onclick="menuToggle()"></div>
        
             <ul class="navigation">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Products</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="#">About</a></li>
-                <li class="cart"><a href="#"><box-icon name='cart'></box-icon></a></li>
+                <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="0" data-aos-once="true"><a href="#" >Home</a></li>
+                <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="50" data-aos-once="true"><a href="menu.html">Menu</a></li>
+                <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="100" data-aos-once="true"><a href="contact.html">Contact us</a></li>
+                <li data-aos="fade-left" data-aos-duration="700" data-aos-delay="150" data-aos-once="true"><a href="about.html">About</a></li>
             </ul>
 
         </header>
         <div class="content">
 
-            <div class="textBox">
-                <h2><span><b style="color: crimson;">W</b>e Speak</span><br>THE GOOD FOOD LANGUAGE <i style="color: crimson;">.</i></h2>
-                <h4><box-icon name='quote-alt-left' type='solid' color='#dc143c' ></box-icon></box-icon> Food taste better when you eat it with your family. </h4>
+            <div class="textBox" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
+                <h1><span>T</span>hat's what </h1>
+                 <h2>We Do Best</h2>
+                
+                <h4><box-icon name='quote-alt-left' type='solid' color='#dc143c' ></box-icon> Food taste better when you eat it with your family. </h4>
                 <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laborum, ratione accusamus debitis, totam minima illo fugit repellendus, id repellat beatae quasi nostrum officiis incidunt provident temporibus? Magni veniam possimus commodi.</p>
-                <a href="#"><sub><box-icon name='rupee' color='#ffffff'></box-icon></sub>Order Now</a>
+                <a href="menu.html">Order Now</a>
                
             </div>
-            <div class="imgBox">
-                <img src="images/food1.png" style="max-height: 600px;">
+            <div class="imgBox" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+                <img src="images/food1.png" id="picture">
                 </div>
         </div>
-        
-        <div class="div2">
-          
-              <div class="textBox">
-                <h3>One the best places in Lucknow to have a wonderful dining experience. We Welcome you to The Indian Vegan, your safety is our utmost priority.</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aut, cum eos corrupti consectetur officia dolor accusamus, sint maiores distinctio, veritatis repellat eum necessitatibus reprehenderit nam vero a unde totam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae eos sed repellendus ducimus aperiam corporis, laudantium natus obcaecati fugit praesentium incidunt, minima consequuntur, commodi recusandae vero iure consequatur. Vero, quod!</p>
-              </div>
-              
-          <div class="imageBox">
-            <img src="images/tourist.jpg">
-        </div>
-          
-        </div>
+        <div class="controller">
+        <ul>
+          <li class="actives contButton">01</li>
+          <li class="contButton">02</li>
+          <li class="contButton">03</li>
+          <li class="contButton">04</li>
+        </ul>
+      </div>
           </section>
+          <div class="div2">
+          
+            <div class="textBox" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+              <h3>One the best places in Lucknow to have a wonderful dining experience. We Welcome you to The Indian Vegan, your safety is our utmost priority.</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem aut, cum eos corrupti consectetur officia dolor accusamus, sint maiores distinctio, veritatis repellat eum necessitatibus reprehenderit nam vero a unde totam.</p>
+            </div>
+            
+        <div class="imageBox" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+          <div class="center slider">
+            
+          </div>
+        </div>
+        
+      </div>
+      
           <div class="div3">
-            <div class="txtBox">
+            <div class="txtBox" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
             <h2>Our <span style="color: crimson;">Specials</span> of the hour</h2>
             <h4>Mouth watering food you just can't say no to...</h4>
           </div>
             <div class="imgDiv">
-              <div class="card1">
+              <div class="card1" data-aos="fade-up" data-aos-duration="700" data-aos-delay="0" data-aos-once="true">
                 <img src="images/plate1.png">
                 <h4>Paneer Tikka Masala</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, debitis explicabo. Assumenda, facere laboriosam. </p>
               </div>
-              <div class="card2">
+              <div class="card2" data-aos="fade-up" data-aos-delay="50" data-aos-duration="700" data-aos-once="true">
                 <img src="images/plate2.png">
                 <h4>Chana Masala</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, debitis explicabo. Assumenda, facere laboriosam. </p>
               </div>
-              <div class="card3"><img src="images/plate3.png">
+              <div class="card3" data-aos="fade-up" data-aos-delay="100" data-aos-duration="700" data-aos-once="true"><img src="images/plate3.png">
                 <h4>Mix Veg</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, debitis explicabo. Assumenda, facere laboriosam. </p></div>
-              <div class="card4"><img src="images/plate4.png">
+              <div class="card4" data-aos="fade-up" data-aos-delay="150" data-aos-duration="700" data-aos-once="true"><img src="images/plate4.png">
                 <h4>Dal Fry</h4>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt, debitis explicabo. Assumenda, facere laboriosam. </p></div>
             </div>
 
             <div class="banner">
               
-              <div class="image">
+              <div class="image" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 <img src="images/customer.jpg">
               </div>
-              <div class="txt">
+              <div class="txt" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
                 <h3 style="color: lightgrey;">Our Values</h3>
                 <h2>Safe and delicious</h2>
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam amet nostrum voluptatibus facilis aspernatur totam est expedita eius, mollitia quod deserunt porro ducimus sed officia quis, dolorum necessitatibus repellendus suscipit!</p>
               </div>
             </div>
             <div class="banner2">
-              <div class="text1">
+              <div class="text1" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
                 <h1>Safety Precautions during Covid</h1>
                 <ul>
                   <li><h3>Washing hands frequently</h3><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p></li>
@@ -133,7 +118,7 @@
                   <li><h3>Disinfecting</h3><p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p></li>
                 </ul>
               </div>
-              <div class="imageBox">
+              <div class="imageBox" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 <img src="images/coffee.png">
               </div>
             </div>
@@ -141,27 +126,27 @@
           <div class="div4">
             <h1>There's something for everyone</h1>
             <div class="content1">
-              <div class="imageBox">
+              <div class="imageBox" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 <img src="images/food4.png">
               </div>
-              <div class="textBox">
+              <div class="textBox" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
                   <h3>Finger Licking Burgers & fries</h3>
                   <h3 style="color: lightgrey;">Fast Foods</h3>
                   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, excepturi quidem odit facilis eveniet perferendis unde ea doloremque sapiente repellendus ipsum vitae? Recusandae, veniam? Quibusdam culpa vero inventore quo quaerat.</p>
                   
-                <a href="#">Order Now</a>
+                <a href="menu.html">Order Now</a>
               </div>
             </div>
             <div class="content2">
               
-              <div class="textBox">
+              <div class="textBox" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
                 <h3>Mouth watering Sweets</h3>
                 <h3 style="color: lightgrey;">Sweets</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis, excepturi quidem odit facilis eveniet perferendis unde ea doloremque sapiente repellendus ipsum vitae? Recusandae, veniam? Quibusdam culpa vero inventore quo quaerat.</p>
                 
-              <a href="#">Order Now</a>
+              <a href="menu.html">Order Now</a>
             </div>
-              <div class="imageBox">
+              <div class="imageBox" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
                 <img src="images/sweet.png">
               </div>
             </div>
@@ -175,7 +160,7 @@
             <input type="submit" value="Locate Store">
           </form>
           </div>
-           <div class="imageBox">
+           <div class="imageBox" data-aos="fade-in" data-aos-duration="1000" data-aos-once="true">
            </div>
          </div>
          <div class="footer">
@@ -196,10 +181,39 @@
             <li><a href="#" style="color: grey;">FAQs</a></li>
           </ul>
          </div>
-
- <div class="loader">
-            <h4 class="loader-logo">The Indian Vegan</h4>
-            <h3 class="count"></h3>
-          </div>
+         
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init();
+   </script>
+   
+<script>
+  var btn=document.getElementsByClassName("contButton");
+  var picture=document.getElementById("picture")
+  for(let i=0;i<btn.length;i++)
+  {
+    btn[i].addEventListener('click',function(){
+      let current=document.getElementsByClassName("actives");
+      current[0].className=current[0].className.replace("actives","");
+      this.className+=" actives";
+    })
+  }
+  btn[0].onclick=function(){
+    picture.src="images/food1.png";
+  }
+  
+  btn[1].onclick=function(){
+    picture.src="images/food2.png";
+  }
+  
+  btn[2].onclick=function(){
+    picture.src="images/food3.png";
+  }
+  
+  btn[3].onclick=function(){
+    picture.src="images/food5.png";
+  }
+</script>
+    
 </body>
 </html>

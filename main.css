@@ -6,55 +6,24 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
-
-.loader {
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: white;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  animation: fadeout 0.5s linear forwards;
-  animation-delay: 2.5s;
+::-webkit-scrollbar {
+  width: 14px;
 }
-@keyframes fadeout {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(transparent, #ffdc73);
+  border-radius: 8px;
 }
-
-.loader h4 {
-  color: lightgray;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-weight: 800;
-  font-size: 14px;
-  border: 8px solid lightgray;
-  padding: 8px 20px;
-  mix-blend-mode: difference;
-}
-.loader h3 {
-  padding-top: 20px;
-  color: lightgray;
-}
-
 .sec {
   position: relative;
   width: 100%;
   min-height: 100vh;
   padding-right: 100px;
+  display: flex;
   padding-left: 100px;
   padding-top: 70px;
   padding-bottom: 100px;
 
-  background: linear-gradient(-130deg, #ffdc73 30%, #fafad2 30%, #fffafa 70%);
+  background: linear-gradient(-90deg, #ffdc73 45%, #fafad2 45%);
   justify-content: space-between;
   transition: 0.5s;
 }
@@ -77,7 +46,7 @@ header .logo {
   font-weight: 800;
   font-size: 14px;
   border: 8px solid black;
-  padding: 8px 20px;
+  padding: 5px 15px;
 }
 header a {
   text-decoration: none;
@@ -93,11 +62,17 @@ header ul li {
 }
 
 header ul li a {
-  color: black;
+  color: rgb(0, 0, 0, 0.7);
   letter-spacing: 3px;
   font-weight: 700;
   margin-left: 40px;
+  padding: 5px 10px;
   text-decoration: none;
+  transition: 0.5s ease;
+}
+header ul li a:hover {
+  color: crimson;
+  
 }
 
 .content {
@@ -110,25 +85,35 @@ header ul li a {
 
 .content .textBox {
   position: relative;
-  max-width: 600px;
+  color:  rgb(0, 0, 0, 0.80);
+  max-width: 620px;
 }
-
-.content .textBox h2 {
-  font-size: 2em;
-  line-height: 1.5em;
-  font-weight: 800;
+.content .textBox h1 {
+  font-size: 60px;
+  line-height: 60px;
+  font-weight: 900;
   text-transform: uppercase;
 }
-.content .textBox h4 {
-  margin-top: 8px;
+.content .textBox h1 span {
+  color: crimson;
+  font-size: 75px;
+  font-weight: 900;
 }
-.content .textBox span {
-  font-size: 2.5em;
-  letter-spacing: 3px;
+.content .textBox h2 {
+  font-weight: 900;
+  margin-top: -15px;
+  font-size: 85px;
+  text-transform: uppercase;
 }
+.content .textBox h4{
+  margin-top: 10px;
+}
+
 .content .textBox p {
   margin-top: 20px;
+  
   font-weight: 100;
+  width:  85%;
 }
 .content .textBox .buttons {
   display: flex;
@@ -144,17 +129,27 @@ header ul li a {
   color: #fff;
   font-weight: 500;
   letter-spacing: 1px;
+  transition: .5s ease;
   text-decoration: none;
   text-transform: uppercase;
 }
-
+.content .textBox a:hover{
+  background: transparent;
+  color: crimson;
+  border: 1px solid rgb(0, 0, 0, 0.5);  
+}
 .content .imgBox {
   width: 700px;
   display: flex;
   margin-top: 50px;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
 }
-
+.content .imgBox img {
+  height: 600px;
+  max-width: 600px;
+  transition: 0.5s;
+}
 .imgBox {
   display: flex;
   width: 400px;
@@ -162,19 +157,43 @@ header ul li a {
   align-items: center;
 }
 
+.controller {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 50px;
+}
+.controller ul li,
+.controller ul li .actives {
+  list-style: none;
+  font-weight: 800;
+  color: rgb(0, 0, 0, 0.1);
+  padding-left: 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: 0.3s;
+  border-left: 5px solid rgb(0, 0, 0, 0.1);
+}
+.controller .actives {
+  border-left: 5px solid crimson;
+  color: #000;
+}
+
 .div2 {
-  margin-top: 200px;
+  margin-top: 50px;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   width: 100%;
-  display: flex;
 }
 
 .div2 .textBox {
   position: relative;
   padding: 10px 50px 10px 0px;
-  max-width: 600px;
+  width: 50%;
   height: 100%;
-  box-sizing: border-box;
 }
 .div2 .textBox p {
   position: relative;
@@ -183,14 +202,36 @@ header ul li a {
 }
 
 .div2 .imageBox {
-  width: 700px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  width: 50%;
+  height: 100%;
 }
-.div2 .imageBox img {
-  max-width: 500px;
-  max-height: 400px;
+.div2 .imageBox .center {
+  position: absolute;
+  transform: translateY(-50%);
+}
+
+.div2 .imageBox .slider {
+  background: url(images/tourist.jpg);
+  background-size: cover;
+  height: 300px;
+  margin-left: 100px;
+  box-shadow: 5px 10px 20px rgb(0, 0, 0, 0.5);
+  width: 500px;
+  animation: animate 12s infinite;
+}
+@keyframes animate {
+  20% {
+    background: url(images/people.jpg);
+    background-size: cover;
+  }
+  60% {
+    background: url(images/food3.jpg);
+    background-size: cover;
+  }
+  100% {
+    background: url(images/tourist.jpg);
+    background-size: cover;
+  }
 }
 
 .div3 {
@@ -232,7 +273,6 @@ header ul li a {
   flex-direction: column;
   align-items: center;
 }
-
 .div3 .imgDiv .card2 {
   background: #fafad2;
   height: 300px;
@@ -267,9 +307,11 @@ header ul li a {
   align-items: center;
 }
 .imgDiv img {
+  cursor: pointer;
   position: relative;
   height: 60%;
   margin-top: -100px;
+  -webkit-transition: -webkit-transform .5s;
 }
 .imgDiv h4 {
   font-weight: 800;
@@ -281,6 +323,20 @@ header ul li a {
   text-align: center;
   width: 100%;
 }
+
+.card1 img:hover{
+  -webkit-transform: rotate(90deg) translateZ(0);
+}
+.card2 img:hover{
+  -webkit-transform: rotate(90deg) translateZ(0);
+}
+.card3 img:hover{
+  -webkit-transform: rotate(90deg) translateZ(0);
+}
+.card4 img:hover{
+  -webkit-transform: rotate(90deg) translateZ(0);
+}
+
 
 .banner {
   margin-top: 150px;
@@ -396,8 +452,8 @@ header ul li a {
   letter-spacing: 1px;
   text-decoration: none;
   text-transform: uppercase;
+  transition: 0.5s;
 }
-
 .div4 .content2 .imageBox {
   width: 50%;
   display: flex;
@@ -530,13 +586,6 @@ header ul li a {
   text-decoration: none;
 }
 @media (max-width: 991px) {
-  .loader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-  }
   .sec {
     padding: 40px;
     background: linear-gradient(360deg, #ffdc73 30%, #fafad2 40%, #fffafa 60%);
@@ -613,11 +662,25 @@ header ul li a {
   .content .textBox {
     position: relative;
     max-width: 100%;
-    padding-right: 20px;
+    padding-right: 10px;
     padding-bottom: 20px;
   }
+  .content .textBox h1 {
+    font-size: 30px;
+    font-weight: 800;
+    line-height: 35px;
+  }
+
+  .content .textBox h1 span {
+    font-size: 45px;
+    font-weight: 800;
+  }
   .content .textBox h2 {
-    font-size: 1.5em;
+    font-size: 45px;
+    line-height: 50px;
+    margin-top: 0px;
+
+    font-weight: 800;
   }
   .content .textBox a {
     font-size: 15px;
@@ -641,15 +704,44 @@ header ul li a {
   }
   .content .imgBox img {
     max-width: 300px;
+    height: 300px;
   }
+  .controller {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    padding: 8px 10px;
+    background: rgb(0, 0, 0, 0.2);
+    line-height: 30px;
+  }
+
+  .controller ul li,
+  .controller ul li .actives {
+    list-style: none;
+    font-weight: 800;
+    color: rgb(0, 0, 0, 0.2);
+    padding-left: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    border-left: 5px solid #6a6a6a;
+  }
+  .controller ul li:nth-child(4) {
+    margin-bottom: 0px;
+  }
+
+  .controller .actives {
+    border-left: 5px solid crimson;
+    color: #000;
+  }
+
   .div2 {
+    padding: 15px;
     flex-direction: column;
-    margin-top: 100px;
   }
 
   .div2 .textBox {
     width: 100%;
-    padding-right: 20px;
+    padding: 10px;
     position: relative;
   }
   .div2 .textBox h3 {
@@ -660,15 +752,26 @@ header ul li a {
   }
   .div2 .imageBox {
     width: 100%;
+    height: 100%;
+
+    background: #fff;
     display: flex;
-    margin-top: 20px;
-    padding-right: 0;
+    margin-top: 150px;
     justify-content: center;
-    align-items: center;
   }
-  .div2 .imageBox img {
-    max-width: 300px;
+  .div2 .imageBox .center {
+    position: relative;
   }
+
+  .div2 .imageBox .slider {
+    background: url(images/tourist.jpg);
+    background-size: cover;
+    height: 200px;
+    width: 300px;
+    margin-left: 0px;
+    animation: animate 12s infinite;
+  }
+
   .div3 {
     padding: 50px;
     flex-direction: column;
