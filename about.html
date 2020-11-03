@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title><script src="https://unpkg.com/boxicons@latest/dist/boxicons.js"></script>
+<link rel="stylesheet" href="aboutCss.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <script>
+        function menuToggle() {
+          const toggleMenu = document.querySelector(".toggleMenu");
+          const navigation = document.querySelector(".navigation");
+          toggleMenu.classList.toggle("active");
+          navigation.classList.toggle("active");
+        }</script>
+      </head>
+<body>
+    <section>
+        <header>
+            <a href="#"><h4 class="logo">The Indian Vegan</h4></a>
+            <div class="toggleMenu" onclick="menuToggle()"></div>
+       
+            <ul class="navigation">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact us</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+    
+        </header>
+
+        <div class="container">
+          
+            
+          <div class="imageBox"  data-aos="fade-in" data-aos-duration="1000" data-aos-delay="50" data-aos-once="true">
+            <img src="images/about.png" id="image1">
+          </div>
+          
+          <div class="textBox" data-aos="fade-up" data-aos-duration="1000" data-aos-once="true">
+              
+            <h1><span style="font-size: 1.5em;color: crimson;">A</span>bout Us</h1>
+            <h2><box-icon name='quote-alt-left' type='solid' color='#dc143c' ></box-icon>The only thing we're serious about is food.</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aperiam, error ad dolor facere earum nostrum adipisci accusamus, accusantium, eos exercitationem consequatur quia molestiae! Nemo perferendis, natus similique repellat distinctio omnis?Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+            <a href="menu.html"><sub><box-icon name='rupee' color='#ffffff'></box-icon></sub>Order Now</a>
+
+          </div>
+        </div>
+</section>
+<div class="team">
+  <h2  data-aos="fade-in" data-aos-duration="1000" data-aos-once="true"><span style="font-size: 1.5em;color: crimson;">O</span>ur Team of Chefs</h2>
+  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut ipsum non voluptatum optio reiciendis, aspernatur repudiandae voluptatem.</p>
+  <div class="cards">
+  <div class="member1"  data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-delay="0">
+    <img src="images/chef1.png">
+    <h4>Neeta Mehta</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit illo, laborum mollitia incidunt dolorum consequuntur.</p>
+  </div>
+  <div class="member2"  data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-delay="50">
+    <img src="images/chef2.png">
+  
+    <h4>Sarash Goila</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit illo, laborum mollitia incidunt dolorum consequuntur.</p></div>
+  <div class="member3"  data-aos="fade-up" data-aos-duration="700" data-aos-once="true" data-aos-delay="100">
+    <img src="images/chef3.png">
+  
+    <h4>Vikas Sharma</h4>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit illo, laborum mollitia incidunt dolorum consequuntur.</p></div>
+    <div class="member4" data-aos="fade-up" data-aos-duration="700"
+    data-aos-delay="150" data-aos-once="true">
+      <img src="images/chef4.png">
+    
+      <h4>Sanjeev Khanna</h4>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit illo, laborum mollitia incidunt dolorum consequuntur.</p></div>
+  
+  </div>
+</div>  
+
+
+<div class="footer">
+           
+    <a href="#"><h4 class="logo">The Indian Vegan</h4></a>
+    <ul class="socialMedia">
+      <li><a href="#"><box-icon name='facebook' type='logo' color='grey' ></box-icon></a></li>
+      <li><a href="#"><box-icon name='twitter' type='logo' color='grey' ></box-icon></a></li>
+      <li><a href="#"><box-icon name='pinterest' type='logo' color='grey' ></box-icon></a></li>
+      <li><a href="#"><box-icon name='telegram' type='logo' color='#808080' ></box-icon></a></li>
+      <li><a href="#"><box-icon name='instagram' type='logo' color='#808080' ></box-icon></a></li>
+    </ul>
+    <p>&copy;2020 Aman Kumar ,"The Indian Vegan". All rights reserved with the creator.</p>
+    <ul class="end">
+      <li><a href="#" style="color: grey;">Terms</a></li>
+      <li><a href="#" style="color: grey;">Conditions</a></li>
+      <li><a href="#" style="color: grey;">Legal</a></li>
+      <li><a href="#" style="color: grey;">FAQs</a></li>
+    </ul>
+   </div>
+    
+   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+   <script>
+     AOS.init();
+   </script>
+    
+    
+</body>
+</html>
